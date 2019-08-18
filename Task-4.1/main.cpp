@@ -2,15 +2,25 @@
 
 using namespace std;
 
-int counting(int maxim)
+int counting(int maxim, int ten)
 {
-    char ch;
-    cin.get(ch);
-    if (ch>='0' && ch<='9') counting(maxim+(int)ch - (int)'0');
-    else return  maxim;
+    int ret=0;
+    if (maxim/ten>=10)
+    {
+        ret=counting(maxim, ten*10);
+        while(maxim/ten>10)
+        {
+           maxim -=ten*10;
+        }
+        return ret+(int)maxim;
+    }
+    else return (int) (maxim/ten);
+
+
 }
 int main()
 {
-    int start = 0;
-    cout <<counting(start);
+    int start;
+    cin >> start;
+    cout <<counting(start,1);
 }
