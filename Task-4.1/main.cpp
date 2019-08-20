@@ -8,11 +8,11 @@ int counting(int maxim, int ten)
     if (maxim/ten>=10)
     {
         ret=counting(maxim, ten*10);
-        while(maxim/ten>10)
+        while(maxim/ten>=10)
         {
            maxim -=ten*10;
         }
-        return ret+(int)maxim;
+        return ret+(int)maxim/ten;
     }
     else return (int) (maxim/ten);
 
