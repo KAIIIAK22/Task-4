@@ -1,14 +1,17 @@
 #include <iostream>
 
 using namespace std;
-int counting(int maxim, int ten=1)
+int counting (int a)
 {
-    if (maxim/ten>=10) return counting(maxim, ten*10)+(maxim/ten)%10;
-    else return (int) (maxim/ten);
+    if (a/10!=0)
+        return a%10+counting(a/10);
+    else
+        return a%10;
 }
 
 int main()
 {
+
     int start;
     cin >> start;
     cout <<counting(start);
