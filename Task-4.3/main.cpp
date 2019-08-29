@@ -6,6 +6,7 @@ void ObnullIntArray (int arr[],int length)
     for(arr[0]=length-1;arr[0]>0;arr[0]--)
         arr[arr[0]]=0;
 }
+
 int CardNumberCheck ()
 {
     int a;
@@ -13,6 +14,7 @@ int CardNumberCheck ()
     cin>>a;
     return a;
 }
+
 int MoneyAmountCheck ()
 {
     int a;
@@ -30,6 +32,7 @@ bool AddMoney (int arr[],int length,int MoneyAmount,int CardNomer)
   }
   else return 0;
 }
+
 void ShowIntArray (int arr[],int length)
 {
     int a;
