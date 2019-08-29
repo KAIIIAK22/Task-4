@@ -25,16 +25,15 @@ bool AddMoney (int arr[],int length,int MoneyAmount,int CardNomer)
 {
   if (CardNomer<=length)
   {
-  arr[CardNomer-1]+=MoneyAmount;
-  return 1;
+      arr[CardNomer-1]+=MoneyAmount;
+      return 1;
   }
   else return 0;
 }
 void ShowIntArray (int arr[],int length)
 {
     int a;
-    for(a=0;a<10;a++)
-    cout<<arr[a] <<" ";
+    for(a=0;a<10;a++) cout<<arr[a]<<" ";
 }
 
 
@@ -46,8 +45,7 @@ int main()
     ObnullIntArray(arr,leng);
     while(1)
     {
-        if (AddMoney(arr,leng,MoneyAmountCheck(),CardNumberCheck()))
-        ShowIntArray(arr,leng);
+        if (AddMoney(arr,leng,MoneyAmountCheck(),CardNumberCheck())) ShowIntArray(arr,leng);
         else cout<<"Error!!! Net takoi cartochki";
         cout<<endl;
     }
