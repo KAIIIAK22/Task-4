@@ -43,7 +43,7 @@ int main()
 {
     const int leng = 10;
     int arr[leng];
-    ObnullIntArray(arr,leng); // Обнуляем элементы масива
+    ObnullIntArray(arr,leng);
     while(1)
     {
         if (AddMoney(arr,leng,MoneyAmountCheck(),CardNumberCheck()))
