@@ -6,11 +6,13 @@ using namespace std;
 
 class masiv
 {
-    public:
+    private:
         unsigned short  int *mas;
+    public:
         int masLen;
         masiv(int len);
         ~masiv();
+        unsigned short int getElem(int a) {if (a<masLen)return mas[a];}
         void random();//randomize
         int maxim();//maximum value
         int minim();//minimum value
@@ -70,7 +72,7 @@ int masiv::minim() //minimum value
  {
     for(int i=0;i<masLen;i++) mas[i]=0;
  }
- 
+
 //===============================================================//Char
 bool Charfunk(int i)
 {
@@ -84,18 +86,18 @@ int main()
 
     masiv a(2);
     a.random();
-    cout << a.mas[0]<<endl;
-    cout << a.mas[1]<<endl;
+    cout << a.getElem(0)<<endl;
+    cout << a.getElem(1)<<endl;
     cout << a.maxim()<<endl;//maximum value
     cout << a.minim()<<endl;//minimum value
     cout << a.isEven(0)<<endl;//Chetnii?
     cout << a.isEven(1)<<endl;//Chetnii?
     a.deistvie(); //Chetnii-1, Ne Chetnii*2
-    cout << a.mas[0]<<endl;
-    cout << a.mas[1]<<endl;
+    cout << a.getElem(0)<<endl;
+    cout << a.getElem(1)<<endl;
     a.Clear(); //Clear masive
-    cout << a.mas[0]<<endl;
-    cout << a.mas[1]<<endl;
+    cout << a.getElem(0)<<endl;
+    cout << a.getElem(1)<<endl;
 //===============================================================//Char
     int b;
     cin >> b;
